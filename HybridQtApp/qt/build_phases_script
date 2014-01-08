@@ -1,0 +1,14 @@
+QTVERSION=/Users/richard/code/qt-src/qt-5x-ios-stable/qtbase
+
+if ! test -d $QTVERSION; then
+    echo You need to set path to Qt inside $SRCROOT/$PROJECT_NAME/qt/build_phases_script
+    exit -1
+fi
+
+cp $PROJECT_NAME/qt/qt.conf $CODESIGNING_FOLDER_PATH/qt.conf
+test -d $CODESIGNING_FOLDER_PATH/qt_qml && rm -r $CODESIGNING_FOLDER_PATH/qt_qml
+mkdir -p $CODESIGNING_FOLDER_PATH/qt_qml
+for p in $QTVERSION/qml; do
+    rsync -r --exclude='*.a' --exclude='*.prl' --exclude='*.qmltypes' $p/ $CODESIGNING_FOLDER_PATH/qt_qml
+done
+cp -r $PROJECT_NAME/qt/qml $CODESIGNING_FOLDER_PATH
