@@ -11,7 +11,9 @@
 #include <QtCore/QtCore>
 #include <QtGui/QtGui>
 #include <QtQuick/QtQuick>
-#include <QtGui/5.2.0/QtGui/qpa/qplatformnativeinterface.h>
+#include <QtGui/5.2.1/QtGui/qpa/qplatformnativeinterface.h>
+
+#include "DataModel.h"
 
 // Manually register all static plugins. if you use other
 // qml modules you would need to do the same for them:
@@ -22,9 +24,11 @@ Q_IMPORT_PLUGIN(QIOSIntegrationPlugin)
 Q_IMPORT_PLUGIN(QtSensorsDeclarativeModule)
 Q_IMPORT_PLUGIN(IOSSensorPlugin)
 
+static QQmlEngine *engine = 0;
+
 @implementation QmlView
 
-- (id) initWithUrl:(NSString *) url
+- (id) initWithUrl:(NSString *)url
 {
     self = [super init];
     if (self) {
@@ -32,14 +36,15 @@ Q_IMPORT_PLUGIN(IOSSensorPlugin)
             int count = 0;
             char **argv = 0;
             new QGuiApplication(count, argv);
-            // no need to call exec!
+            
+            engine = new QQmlEngine();
+            engine->rootContext()->setContextProperty(QLatin1String("DataModel"), DataModel::instance());
+            
+            // no need to call qApp::exec()!
         }
         
-        QQmlEngine *engine = new QQmlEngine();
-        m_engine = engine;
-        
         QQmlComponent component(engine);
-        component.loadUrl(QUrl("qml/main.qml"));
+        component.loadUrl(QUrl(QString::fromNSString(url)));
         
         if (!component.isReady() ) {
             m_window = 0;
@@ -60,7 +65,6 @@ Q_IMPORT_PLUGIN(IOSSensorPlugin)
 
 - (void) dealloc
 {
-    delete static_cast<QQmlEngine *>(m_engine);
     if (m_window)
         delete static_cast<QWindow *>(m_window)->parent();
 }
@@ -75,7 +79,7 @@ Q_IMPORT_PLUGIN(IOSSensorPlugin)
 {
     [super setFrame:frame];
     if (m_window)
-        static_cast<QWindow *>(m_window)->setGeometry(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
+        static_cast<QWindow *>(m_window)->setGeometry(0, 0, frame.size.width, frame.size.height);
 }
 
 - (void *)qwindow

@@ -1,6 +1,7 @@
 import QtQuick 2.1
 
 Image {
+    id: img
     source: "qt.png"
     x: Math.random() * (parent.width - width)
     y: Math.random() * (parent.height - height)
@@ -11,10 +12,7 @@ Image {
     property real bounce: 0.3 + (Math.random() * 0.3)
     property real gravity: 0.2
 
-    property real tick: 0
-    NumberAnimation on tick { to: 1; duration: Number.MAX_VALUE; paused: !sensor.active }
-
-    onTickChanged:
+    function tick()
     {
         // adjust icon speed:
         speedX -= sensor.reading.x * gravity;
@@ -41,4 +39,9 @@ Image {
             speedY = speedY * -1 * bounce
         }
     }
+
+    opacity: 0.01
+    Component.onCompleted: opacity = 1
+    Behavior on opacity { NumberAnimation {} }
+    onOpacityChanged: if (opacity === 0) img.destroy()
 }

@@ -15,7 +15,7 @@
 		798F74C8187D424900B2F823 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 798F74C7187D424900B2F823 /* AppDelegate.m */; };
 		798F74CB187D424900B2F823 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798F74C9187D424900B2F823 /* Main_iPhone.storyboard */; };
 		798F74CE187D424900B2F823 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 798F74CC187D424900B2F823 /* Main_iPad.storyboard */; };
-		798F74D1187D424900B2F823 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798F74D0187D424900B2F823 /* FirstViewController.m */; };
+		798F74D1187D424900B2F823 /* FirstViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 798F74D0187D424900B2F823 /* FirstViewController.mm */; };
 		798F74D4187D424900B2F823 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 798F74D3187D424900B2F823 /* SecondViewController.m */; };
 		798F74D6187D424900B2F823 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798F74D5187D424900B2F823 /* Images.xcassets */; };
 		798F74DD187D424900B2F823 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 798F74DC187D424900B2F823 /* XCTest.framework */; };
@@ -28,8 +28,6 @@
 		798F74FE187D456000B2F823 /* libQt5Core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798F74F8187D456000B2F823 /* libQt5Core.a */; };
 		798F74FF187D456000B2F823 /* libQt5Gui.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798F74F9187D456000B2F823 /* libQt5Gui.a */; };
 		798F7500187D456000B2F823 /* libQt5PlatformSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798F74FA187D456000B2F823 /* libQt5PlatformSupport.a */; };
-		798F7501187D456000B2F823 /* libQt5Qml.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798F74FB187D456000B2F823 /* libQt5Qml.a */; };
-		798F7502187D456000B2F823 /* libQt5Quick.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798F74FC187D456000B2F823 /* libQt5Quick.a */; };
 		798F7503187D456000B2F823 /* libQt5Sensors.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798F74FD187D456000B2F823 /* libQt5Sensors.a */; };
 		798F7505187D467F00B2F823 /* libqtsensors_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798F7504187D467F00B2F823 /* libqtsensors_ios.a */; };
 		798F750D187D484800B2F823 /* libQt5Network.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798F750C187D484800B2F823 /* libQt5Network.a */; };
@@ -45,6 +43,9 @@
 		798F7531187D617D00B2F823 /* Ball.qml in Resources */ = {isa = PBXBuildFile; fileRef = 798F7530187D617D00B2F823 /* Ball.qml */; };
 		798F7535187D6D8700B2F823 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 798F7534187D6D8700B2F823 /* README.txt */; };
 		79EF69C5187D725D0093191C /* qt.png in Resources */ = {isa = PBXBuildFile; fileRef = 79EF69C4187D725D0093191C /* qt.png */; };
+		79EF69CD187EAD530093191C /* libQt5Qml_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EF69CC187EAD530093191C /* libQt5Qml_debug.a */; };
+		79EF69CF187EAD5A0093191C /* libQt5Quick_debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EF69CE187EAD5A0093191C /* libQt5Quick_debug.a */; };
+		79EF69D2187EC2580093191C /* DataModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 79EF69D0187EC2580093191C /* DataModel.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +72,7 @@
 		798F74CA187D424900B2F823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		798F74CD187D424900B2F823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		798F74CF187D424900B2F823 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		798F74D0187D424900B2F823 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		798F74D0187D424900B2F823 /* FirstViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = FirstViewController.mm; sourceTree = "<group>"; };
 		798F74D2187D424900B2F823 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		798F74D3187D424900B2F823 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		798F74D5187D424900B2F823 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -103,6 +104,10 @@
 		798F7530187D617D00B2F823 /* Ball.qml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Ball.qml; sourceTree = "<group>"; };
 		798F7534187D6D8700B2F823 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		79EF69C4187D725D0093191C /* qt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qt.png; sourceTree = "<group>"; };
+		79EF69CC187EAD530093191C /* libQt5Qml_debug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQt5Qml_debug.a; path = "../../qt-src/qt-5x-ios-stable/qtbase/lib/libQt5Qml_debug.a"; sourceTree = "<group>"; };
+		79EF69CE187EAD5A0093191C /* libQt5Quick_debug.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQt5Quick_debug.a; path = "../../qt-src/qt-5x-ios-stable/qtbase/lib/libQt5Quick_debug.a"; sourceTree = "<group>"; };
+		79EF69D0187EC2580093191C /* DataModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataModel.cpp; sourceTree = "<group>"; };
+		79EF69D1187EC2580093191C /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +124,8 @@
 				798F74FF187D456000B2F823 /* libQt5Gui.a in Frameworks */,
 				798F750D187D484800B2F823 /* libQt5Network.a in Frameworks */,
 				798F7500187D456000B2F823 /* libQt5PlatformSupport.a in Frameworks */,
-				798F7501187D456000B2F823 /* libQt5Qml.a in Frameworks */,
-				798F7502187D456000B2F823 /* libQt5Quick.a in Frameworks */,
+				79EF69CD187EAD530093191C /* libQt5Qml_debug.a in Frameworks */,
+				79EF69CF187EAD5A0093191C /* libQt5Quick_debug.a in Frameworks */,
 				798F7503187D456000B2F823 /* libQt5Sensors.a in Frameworks */,
 				798F750F187D4A1D00B2F823 /* libqtquick2plugin.a in Frameworks */,
 				798F7511187D4A2A00B2F823 /* libwindowplugin.a in Frameworks */,
@@ -167,6 +172,8 @@
 		798F74B6187D424900B2F823 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79EF69CE187EAD5A0093191C /* libQt5Quick_debug.a */,
+				79EF69CC187EAD530093191C /* libQt5Qml_debug.a */,
 				798F752D187D5C5200B2F823 /* CoreLocation.framework */,
 				798F752B187D5C1800B2F823 /* CoreMotion.framework */,
 				798F7512187D4A4200B2F823 /* libdeclarative_sensors.a */,
@@ -198,7 +205,7 @@
 				798F74C9187D424900B2F823 /* Main_iPhone.storyboard */,
 				798F74CC187D424900B2F823 /* Main_iPad.storyboard */,
 				798F74CF187D424900B2F823 /* FirstViewController.h */,
-				798F74D0187D424900B2F823 /* FirstViewController.m */,
+				798F74D0187D424900B2F823 /* FirstViewController.mm */,
 				798F74D2187D424900B2F823 /* SecondViewController.h */,
 				798F74D3187D424900B2F823 /* SecondViewController.m */,
 				798F74D5187D424900B2F823 /* Images.xcassets */,
@@ -239,6 +246,8 @@
 		798F7520187D4D9E00B2F823 /* qt */ = {
 			isa = PBXGroup;
 			children = (
+				79EF69D0187EC2580093191C /* DataModel.cpp */,
+				79EF69D1187EC2580093191C /* DataModel.h */,
 				798F7534187D6D8700B2F823 /* README.txt */,
 				798F7521187D4D9E00B2F823 /* build_phases_script */,
 				798F7522187D4D9E00B2F823 /* qml */,
@@ -267,10 +276,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 798F74EC187D424900B2F823 /* Build configuration list for PBXNativeTarget "HybridQtApp" */;
 			buildPhases = (
+				79EF69CB187D96830093191C /* Run moc */,
 				798F74B0187D424900B2F823 /* Sources */,
 				798F74B1187D424900B2F823 /* Frameworks */,
 				798F74B2187D424900B2F823 /* Resources */,
-				798F7514187D4B8600B2F823 /* copy qml into bundle */,
+				798F7514187D4B8600B2F823 /* Copy qml into bundle */,
 			);
 			buildRules = (
 			);
@@ -361,19 +371,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		798F7514187D4B8600B2F823 /* copy qml into bundle */ = {
+		798F7514187D4B8600B2F823 /* Copy qml into bundle */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "copy qml into bundle";
+			name = "Copy qml into bundle";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = $PROJECT_NAME/qt/build_phases_script;
+			shellScript = "$PROJECT_NAME/qt/build_phases_script $QTDIR";
+		};
+		79EF69CB187D96830093191C /* Run moc */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run moc";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "moc $PROJECT_NAME/qt/DataModel.h -o $PROJECT_NAME/qt/moc_DataModel.cpp";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -385,7 +409,8 @@
 				798F74D4187D424900B2F823 /* SecondViewController.m in Sources */,
 				798F74C8187D424900B2F823 /* AppDelegate.m in Sources */,
 				798F7529187D4D9E00B2F823 /* QmlView.mm in Sources */,
-				798F74D1187D424900B2F823 /* FirstViewController.m in Sources */,
+				79EF69D2187EC2580093191C /* DataModel.cpp in Sources */,
+				798F74D1187D424900B2F823 /* FirstViewController.mm in Sources */,
 				798F74C4187D424900B2F823 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,7 +556,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"~/code/qt-src/qt-5x-ios-stable/qtbase/include",
+					$QTDIR/include,
 				);
 				INFOPLIST_FILE = "HybridQtApp/HybridQtApp-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -544,6 +569,7 @@
 					"/Users/richard/code/qt-src/qt-5x-ios-stable/qtbase/qml/QtSensors",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				QTDIR = "/Users/richard/code/qt-src/qt-5x-ios-stable/qtbase";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -561,7 +587,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"~/code/qt-src/qt-5x-ios-stable/qtbase/include",
+					$QTDIR/include,
 				);
 				INFOPLIST_FILE = "HybridQtApp/HybridQtApp-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -574,6 +600,7 @@
 					"/Users/richard/code/qt-src/qt-5x-ios-stable/qtbase/qml/QtSensors",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				QTDIR = "/Users/richard/code/qt-src/qt-5x-ios-stable/qtbase";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

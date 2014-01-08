@@ -10,7 +10,6 @@
 #import <Foundation/Foundation.h>
 
 @interface QmlView : UIView {
-    void *m_engine;
     void *m_window;
 }
 

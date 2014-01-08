@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "QmlView.h"
+#include "DataModel.h"
 
 @interface FirstViewController ()
 
@@ -21,7 +22,9 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     UIView *qmlView = [[QmlView alloc] initWithUrl:@"qml/main.qml"];
-    qmlView.frame = self.view.frame;
+    CGRect rect = self.view.frame;
+    rect.size.height -= 100;
+    qmlView.frame = rect;
     [self.view addSubview:qmlView];
 }
 
@@ -31,4 +34,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)sliderValueChanged:(id)sender {
+    UISlider *slider = (UISlider *)sender;
+    DataModel::instance()->setBallCount(int(slider.value));
+}
 @end
